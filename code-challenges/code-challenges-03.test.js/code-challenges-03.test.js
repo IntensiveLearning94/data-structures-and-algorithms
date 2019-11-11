@@ -7,7 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     return b - a;
   });
   return arr;
@@ -24,7 +24,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  arr.sort(function(a, b, A, B) {
+  arr.sort(function (a, b, A, B) {
     if (a < b || A < B) return -1;
     else if (a > b || A > B) return 1;
     return 0;
@@ -39,7 +39,7 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     return a.length - b.length;
   });
   return arr;
@@ -54,7 +54,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     if (a.toLowerCase() < b.toLowerCase()) return -1;
     if (a.toLowerCase() > b.toLowerCase()) return 1;
     return 0;
@@ -95,7 +95,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  arr.sort(function(a, b){
+  arr.sort(function (a, b) {
     let aa = JSON.stringify(a);
     let bb = JSON.stringify(b);
     return aa.length - bb.length;
@@ -122,11 +122,11 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  let sorting = arr.sort(function(a, b) {
-    if ( a.lastName < b.lastName ){
+  let sorting = arr.sort(function (a, b) {
+    if (a.lastName < b.lastName) {
       return -1;
     }
-    if ( a.lastName > b.lastName ){
+    if (a.lastName > b.lastName) {
       return 1;
     }
     return 0;
@@ -149,17 +149,17 @@ const sortPeopleBetter = (arr) => {
 
     if (a.lastName > b.lastName) {
       return 1;
-    } else if (a.lastName < b.lastName){
+    } else if (a.lastName < b.lastName) {
       return -1;
     } else {
       if (a.firstName > b.firstName) {
         return 1;
-      } else if (a.firstName < b.firstName){
+      } else if (a.firstName < b.firstName) {
         return -1;
       } else {
         if (a.age > b.age) {
           return 1;
-        } else if (a.age < b.age){
+        } else if (a.age < b.age) {
           return -1;
         }
       }
@@ -205,9 +205,9 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = (arr) => {
-  // Solution code here...
-};
+// const sortSchedule = (arr) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
