@@ -141,19 +141,23 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let outputArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
-      outputArray.push('Fizz Buzz');
-    } else if (arr[i] % 3 === 0) {
-      outputArray.push('Fizz');
-    } else if (arr[i] % 5 === 0) {
-      outputArray.push('Fizz');
-    } else {
-      outputArray.push(arr[i])
+  let buzzArray = [];
+  arr.forEach(function(number) {
+    if (number % 5 === 0 && number % 3 === 0) {
+      buzzArray.push('Fizz Buzz')
     }
-  }
-  return outputArray
+    else if (number % 5 == 0) {
+      buzzArray.push('Buzz')
+    }
+    else if (number % 3 === 0) {
+      buzzArray.push('Fizz')
+    }
+    else {
+      buzzArray.push(number)
+    }
+
+  })
+  return buzzArray
 };
 
 /* ------------------------------------------------------------------------------------------------
