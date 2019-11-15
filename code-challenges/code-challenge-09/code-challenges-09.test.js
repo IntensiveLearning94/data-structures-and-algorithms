@@ -9,9 +9,7 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  return arr.reduce((length, value) => {
-    return length + 1;
-  }, 0);
+  return arr.reduce((accumulator) => accumulator + 1)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,8 +136,15 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (arr) => {
-  // Solution code here...
+const countNumberOfChildren = (array) => {
+  return array.reduce((accumalator, value) => {
+    if(value.children){
+      return accumalator + value.children.length;
+    }
+    else{
+      return accumalator;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -150,8 +155,8 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
-const calculateAverage = (arr) => {
-  // Solution code here...
+const calculateAverage = (array) => {
+  return array.reduce((accumalator, value) => (accumalator + value)) / array.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -171,8 +176,15 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-const countPrimeNumbers = (arr) => {
-  // Solution code here...
+const countPrimeNumbers = (array) => {
+  return array.reduce((accumalator,value) => {
+    if(isPrime(value)){
+      return accumalator + 1;
+    }
+    else {
+      return accumalator;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
